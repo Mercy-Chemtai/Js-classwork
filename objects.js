@@ -36,7 +36,13 @@ Object.keys(cup).forEach(item =>{
 })
 
 
-// //Given an array of objects, each object representing a person with a name and age property, 
+
+
+
+
+
+
+// 1.  // //Given an array of objects, each object representing a person with a name and age property, 
 // //write a function that returns a new array containing the names of all people who are 18
 //  //years old or older. 
  const people = [
@@ -53,7 +59,7 @@ Object.keys(cup).forEach(item =>{
 
   
   
-//   //Write a function that takes an array of objects, where each object represents a product with a name,
+//  2. //Write a function that takes an array of objects, where each object represents a product with a name,
 //   // price, and category property. The function should return an object that groups the products by their
 //   // categories, with the category names as keys and the arrays of products as values. 
   const products = [
@@ -74,7 +80,7 @@ console.log(Category(products))
   
 
 
-//  // Given an array of objects, where each object represents a student with a name and an array of scores,
+// 3. // Given an array of objects, where each object represents a student with a name and an array of scores,
 //  // write a function that returns a new array containing the names of all students whose average score is
 //  // greater than or equal to 85. 
  const students = [
@@ -93,7 +99,7 @@ console.log(Category(products))
   console.log(goodperfomance(students))
 
 
-  //Given an object representing a car, with properties for the make, model, year, and a method to display
+  // 4. //Given an object representing a car, with properties for the make, model, year, and a method to display
   // the car's information, write a function that takes the car object and adds a new method to the object
   // called age. The age method should return the current age of the car based on the current year and the
    //car's year property. 
@@ -112,6 +118,15 @@ console.log(Category(products))
   }
   const currentAge = Oldyear(car)
   console.log(currentAge)
+
+// OR
+
+  function carNewAge(car){
+    car["age"]=(2024-car.year)
+    console.log(car)
+  }
+carNewAge(car)
+
 
  
 
