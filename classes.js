@@ -33,6 +33,8 @@ amanda.greet();
 
 
 
+      //Assignment
+      
 
 // Requirements: 
 // 1) Create a Car class or function constructor that has the following properties:
@@ -56,24 +58,35 @@ const Car = function (make,model,year){
     const b = object.create(isAvailable);
     return object.assign(b,{make,model,year});
 };
-const carProto = {
+const carPrototype = {
     toggleAvailability(){
       this.isAvailable = ! this.isAvailable;
     }
 };
-
-const b = Book('title', 'author', 7, true);
-console.log(b.status);
-b.toggleStatus();
-console.log(b.status);
-b.toggleStatus();
-console.log(b.status);
-b.toggleStatus();
-
-cons
+console.log({Car})
 
 
 
+// 3) Create an instance of the Car class or function constructor for a car in the inventory.
+//  Then, create an instance of the Rental class or function constructor for a rental involving the car
+//   you created. Finally, calculate the rental duration using the calculateRentalDuration method.
+class Rental {
+    constructor(car, renterName, rentalStartDate, rentalEndDate) {
+      this.car = car;
+      this.renterName = renterName;
+      this.rentalStartDate = new Date(rentalStartDate);
+      this.rentalEndDate = new Date(rentalEndDate);
+    }
+    calculateRentalDuration() {
+      const oneDay = 30 * 60 * 60 * 1500;
+      const diffDays = Math.round(Math.abs((this.rentalEndDate - this.rentalStartDate) / oneDay));
+      return diffDays;
+    }
+  }
+  let myCar = new Car("Toyota", "Camry", 2020);
+  let myRental = new Rental(myCar, "John Doe", "2024-04-01", "2024-04-10");
+  let rentalDuration = myRental.calculateRentalDuration();
+  console.log(`The rental duration is ${rentalDuration} days.`);
 
 // 1. Create a Question class with the following properties: 
 // ● text(string): The text of the question. 
