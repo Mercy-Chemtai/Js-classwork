@@ -1,35 +1,35 @@
-class Person{
-    constructors(name,age){
-        this.name = name;
-        this.age = age;
+// class Person{
+//     constructors(name,age){
+//         this.name = name;
+//         this.age = age;
         
-    }
- greet(){
-    console.log(`Hello, my name is${this.name} and I am ${this.age} years old`);
-    }
-};
-const jane = new Person (`jane`,30)
-console.log({jane});
-jane.greet();
-console.log('prototype',Person.greet)
+//     }
+//  greet(){
+//     console.log(`Hello, my name is${this.name} and I am ${this.age} years old`);
+//     }
+// };
+// const jane = new Person (`jane`,30)
+// console.log({jane});
+// jane.greet();
+// console.log('prototype',Person.greet)
 
-Person.prototype.nationality = 'kenyan';
-console.log('nationality',jane.nationality)
+// Person.prototype.nationality = 'kenyan';
+// console.log('nationality',jane.nationality)
 
-class Student extends Person{
-    constructor (name,age){
-        super(name,age);
-        this.school(){
-            return 
-        }
-    }
-};
+// class Student extends Person{
+//     constructor (name,age){
+//         super(name,age);
+//         this.school(){
+//             return 
+//         }
+//     }
+// };
 
-const amanda= new Student('Amanda',19);
+// const amanda= new Student('Amanda',19);
 
-console.log({Person});
-console.log('nationality',amanda.nationality);
-amanda.greet();
+// console.log({Person});
+// console.log('nationality',amanda.nationality);
+// amanda.greet();
 
 
 
@@ -52,18 +52,13 @@ class Car{
     this.year = year
     this.isAvailable = isAvailable
    }
+   toggleAvailability(){
+  this.isAvailable =! this.isAvailable;
 };
 
-const Car = function (make,model,year){
-    const b = object.create(isAvailable);
-    return object.assign(b,{make,model,year});
-};
-const carPrototype = {
-    toggleAvailability(){
-      this.isAvailable = ! this.isAvailable;
-    }
-};
-console.log({Car})
+}
+const car = new Car ("Toyota ","Camri",2020 ,true)
+console.log(car.toggleAvailability)
 
 
 
@@ -150,4 +145,4 @@ quiz.submitAnswer("4");
 quiz.submitAnswer("Joseph");
 console.log("Score:", quiz.score);
 
-   
+
