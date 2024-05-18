@@ -2,7 +2,7 @@
 // The function should log the message to the console after the specified delay time
 
 async function logMessageWithDelay(message, delayInMilliseconds) {
-  await new Promise((resolve) => setTimeout(resolve, delayInMilliseconds));
+  await new Promise((resolve ,reject) => setTimeout(resolve, delayInMilliseconds));
   console.log(message);
 }
 logMessageWithDelay("I love AkiraChix",2000);
@@ -25,6 +25,17 @@ logMessageWithDelay("I love AkiraChix",2000);
   
   const userIDs = [167,168,170,171];
   fetchAndLogUserDataInSequence(userIDs);
+
+  const userDataStorage= [{}]
+
+  async function userData(userId){
+    try{
+      if(!userId) return 'No user id provided';
+      await new Promise((resolve,reject)=>{
+        const
+      })
+    }
+  }
 
 
 
